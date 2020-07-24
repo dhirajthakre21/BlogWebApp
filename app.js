@@ -67,7 +67,7 @@ const connect = mongoose.connect('mongodb+srv://dhirajthakre21:dhiraj1thakre1@bl
 //mongodb atlas 
 //confirm the connection 
 connect.then((db)=>{
-	console.log('Succesfully Connected the mongoose server ');
+	console.log('You are successfully Connected the mongoose server ');
 } , (err) =>{
 	console.log(err);
 	
