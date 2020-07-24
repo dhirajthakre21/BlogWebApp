@@ -1,0 +1,130 @@
+<! =======Including header.ejs at top of page .It contains navbar for the page ======= >
+
+<html>
+ <head>
+	<title>Welcome to Yelpcamp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	 <style>
+	 body {
+			 background-color : black ; 
+			 background-repeat: no-repeat;
+			 background-size : cover 
+		 }
+
+		#landing-header {
+		  z-index: 1;
+		  position: relative;
+		  text-align: center;
+		  padding-top: 35vh;
+		}
+
+		#landing-header h1 {
+		  color: #fff;
+		}
+
+		.slideshow { 
+		  position: fixed;
+		  width: 100%;
+		  height: 100%;
+		  top: 0;
+		  left: 0;
+		  z-index: 0;
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.slideshow li { 
+		  width: 100%;
+		  height: 100%;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  background-size: cover;
+		  background-position: 50% 50%;
+		  background-repeat: no-repeat;
+		  opacity: 0;
+		  z-index: 0;
+		  animation: imageAnimation 30s linear infinite; 
+		}
+		.slideshow li:nth-child(1) { 
+		  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4635bcd4-4a1d-4e83-bbe4-9edf40e125d0/dbttmck-3601ed5a-a6d7-4748-8774-1cf7c9401305.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNDYzNWJjZDQtNGExZC00ZTgzLWJiZTQtOWVkZjQwZTEyNWQwXC9kYnR0bWNrLTM2MDFlZDVhLWE2ZDctNDc0OC04Nzc0LTFjZjdjOTQwMTMwNS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.S1BULQlemgG9mw_7yDpHUjnf_vXh3T8dpS3bay8Ml08);
+		   
+		}
+		 
+		.slideshow li:nth-child(2) { 
+		  background-image: url(https://cdn.wallpaperhi.com/1920x1080/20120421/water%20beach%20night%20architecture%20bar%20maldives%201920x1080%20wallpaper_www.wallpaperhi.com_48.jpg) ;
+		 animation-delay: 5s; 
+		}
+		.slideshow li:nth-child(3) { 
+		  background-image: url(https://wallpaperplay.com/walls/full/e/c/1/242431.jpg);
+		  animation-delay: 10s; 
+		}
+		.slideshow li:nth-child(4) { 
+		  background-image: url(https://free4kwallpapers.com/uploads/originals/2016/12/24/night-camping-under-the-stars-wallpaper.jpg);
+		  animation-delay: 15s; 
+		}
+		.slideshow li:nth-child(5) { 
+		  background-image: url(https://wallpaperplay.com/walls/full/b/e/e/251620.jpg);
+		  animation-delay: 20s; 
+		}
+		 .slideshow li:nth-child(6) { 
+		  background-image: url(https://wallpaperaccess.com/full/549274.jpg);
+		  animation-delay: 25s; 
+		}
+
+		@keyframes imageAnimation { 
+		  0% { 
+			opacity: 0; 
+			animation-timing-function: ease-in;
+		  }
+		  10% {
+			opacity: 1;
+			animation-timing-function: ease-out;
+		  }
+		  20% {
+			opacity: 1
+		  }
+		  30% {
+			opacity: 0
+		  }
+		}
+		 
+	
+		</style>
+	 <script>
+		/*function myFunction() {
+    	document.getElementById("demo").style.color = "red";
+							} */
+	</script>
+	 
+ </head>
+<body>
+	 
+	<div id="landing-header">
+		<div class='container'>
+			<div class='jumbotron' style='opacity : 0.6 '>
+				<h1 style='color : black '>Welcome to YelpCamp!</h1>
+				<a href="/campgrounds" class="btn btn-info">View All Campgrounds</a>
+			</div>
+		</div>
+    </div>
+	
+</body>
+	<ul class='slideshow'>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		
+		
+	</ul>
+ 
+	
+
+
+

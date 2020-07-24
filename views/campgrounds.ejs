@@ -1,0 +1,39 @@
+ <! =======Including header.ejs at top of page .It contains navbar for the page ======= >
+<%- include ("partials/header") %>
+<br>
+
+<div class='container'>
+		<header class='jumbotron'> 
+		<h1>Welcome to YelpCamp.com</h1> 
+		<p> View our own campgrounds all over  the world </p>
+		<! Hyperlink button>
+		<a class='btn btn-primary btn-lg' href='/campgrounds/new'> To add new Campgrounds </a>	
+</header>
+
+<!==========Here we are looping through campgrounds list by using for forEach 
+ and campground is parameter===========>
+<div class='row text-center' style ="display-flex; flex-wrap:wrap;" >
+	<% campgrounds.forEach(function(campground){ %>
+	
+	<! Here we are giving greedy system for long and short >
+		<div class="col-md-3 col-sm-6">
+			
+				<div class="img-thumbnail"> 
+					<img src="<%=campground.image%>" class="img-fluid" >
+						<figcaption class="figure-caption "> 
+							`<h4><%= campground.name %> </h4>
+						</figcaption>
+					<!===more info button ===>
+					<br>
+						<a class = 'btn btn-primary' href="campgrounds/<%= campground._id %>"> More Info </a>
+						
+				</div>
+		</div>
+	<%})%>
+</div>
+</div>
+<br>
+<br>
+<footer style='background-color :rgb(176,224,230)' class="page-footer">
+	<%- include ("partials/footer") %>
+</footer>

@@ -1,0 +1,33 @@
+<%- include ("../partials/header") %>
+<br>
+<br>
+<div class='container' >
+	<h1 style="text-align:center ; opacity : 0.6" class="jumbotron" > Create a New Comment </h1>
+	<div class='row'>
+		<div style='width :30% ; margin :0 auto'> <! to get width of 30% and margin auto from left and right >
+				<form action='/campgrounds/<%= campground._id %>/comments' method='POST' style='opacity : 0.7'>
+					<div > <! it will group up indivisually  >
+						<input type='text' name='comment[text]' placeholder='Text'>
+					</div>
+					
+					
+					<div class='form-group'>	
+						<button class='btn btn-lg btn-primary btn-block'> Submit </button> <! block is used it will gain size of input bar >
+					</div>	
+				</form>	
+		<!hyperlink> 
+		<a href='/campgrounds' style ='color : black '> Go Back </a>	
+		</div>
+	</div>	
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer style='background-color :rgb(176,224,230)' class="page-footer">
+	<%- include ("../partials/footer") %>
+</footer>
+	

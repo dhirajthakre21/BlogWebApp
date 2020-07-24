@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>Welcome to Yelpcamp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ </head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-light bg-light" style=" opacity : 0.6">
+	
+		<div class="navbar-header">
+				<a class="navbar-brand " href="/">Yelpcamp </a>
+		</div>
+    		<ul class="navbar-nav ml-auto">
+				<% if (!loguser) { %>
+					<li><a class="nav-item nav-link active" href="/login">Login <i class="fas fa-user"></i> </a></li>
+					<li><a class="nav-item nav-link active" href="/register">Sign Up </a></li>
+				<% }
+				 else 
+				{ %>
+					<li style='color : black '><a  class="nav-item nav-link active" href="/profil">Logged in as <%= loguser.username %></a></li>
+      				<li><a class="nav-item nav-link active" href="/logout">Logout</a></li>
+				<% } %>
+    		</ul>
+	
+ 	</nav>      <% if(success && success.length > 0) { %>
+					<div class='container'>
+						<div class="alert alert-success" role="alert">
+					   <%= success %>
+						</div>
+					</div>
+					<% } %>
+				<% if(error && error.length > 0) { %>
+					<div class='container'>
+						<div class="alert alert-danger" role="alert">
+						<%= error %>
+						</div>
+					</div>
+					<% } %>
+	
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+</body>
+</html>
